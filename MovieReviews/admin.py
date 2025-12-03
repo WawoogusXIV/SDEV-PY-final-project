@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import Showings, Reviews, Ratings
+from .models import Showing, Review
 
 # Register your models here.
-admin.site.register(Showings)
-admin.site.register(Reviews)
-admin.site.register(Ratings)
+admin.site.register(Showing)
+admin.site.register(Review)
