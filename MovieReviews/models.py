@@ -26,7 +26,15 @@ class Review(models.Model):
     def __str__(self):
         return f"Review for {self.showing.title} by {self.reviewer.username}"
     
-    
+class ProfessionalReview(models.Model):
+    showing = models.ForeignKey(Showing, on_delete=models.CASCADE)
+    critic_name = models.CharField(max_length=100)
+    review_text = models.TextField()
+    rating = models.IntegerField()
+    publication = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"Professional Review for {self.showing.title} by {self.critic_name}"  
     
 
     
