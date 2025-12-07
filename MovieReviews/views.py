@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def home_page(request):
     return render(request, 'showings/Index.html', {})
+
+def movie_page(request):
+    return render(request, 'showings/MoviePage.html', {})
