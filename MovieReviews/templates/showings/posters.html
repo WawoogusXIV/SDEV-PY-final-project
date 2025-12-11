@@ -1,0 +1,9 @@
+{% extends 'showings/Index.html' %}
+
+{% block content %}
+    {% for movie in show %}
+        
+        <a href="MoviePage"><img src="{{ movie.poster_image }}" alt="{{ movie.title }}"></a>
+        
+    {% endfor %}
+{% endblock %}
