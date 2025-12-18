@@ -1,0 +1,13 @@
+{% extends 'MovieReviews/MoviePage.html' %}
+
+{% block content %}
+    <div>
+        <hr>
+        {% for review in reviews %}
+            <p>{{ review.review_text }}</p>
+            <hr>
+        {% empty %}
+            <p>No reviews yet.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
