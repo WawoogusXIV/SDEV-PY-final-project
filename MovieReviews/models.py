@@ -6,11 +6,11 @@ class Showing(models.Model):
     title = models.CharField(max_length=100)
     decription = models.TextField()
     duration = models.CharField(max_length=20)
-    showing_date = models.DateField(default=timezone.now)
+    showing_date = models.DateField(blank=True, null=True)
     release_date = models.DateField()
     genre = models.CharField(max_length=50)
     poster_image = models.URLField()
-    #professional_review_link = models.URLField()
+    professional_review_link = models.URLField(blank=True)
 
     def when_selected(self):
         return self.title
