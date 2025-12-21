@@ -13,7 +13,7 @@ def home_page(request):
 
 def movie_page(request, pk):
     this_post = get_object_or_404(Showing, pk=pk)
-    reviews = this_post.review_set.all().order_by('-created_at')
+    reviews = Review.objects.filter(showing=this_post)
     return render(request, 'showings/movie_details.html', {'this_post': this_post, 'reviews': reviews})
 
 def new_review(request, pk):

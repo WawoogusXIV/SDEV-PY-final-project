@@ -50,3 +50,16 @@ p{
 .review {
     margin: 20px 0px 20px 20px;
 }
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: #C25100;
+    background: none;
+    border-color: #C25100;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    color: #FFFFFF;
+    background-color: #C25100;
+}

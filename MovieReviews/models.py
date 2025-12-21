@@ -10,6 +10,7 @@ class Showing(models.Model):
     release_date = models.DateField()
     genre = models.CharField(max_length=50)
     poster_image = models.URLField()
+    #professional_review_link = models.URLField()
 
     def when_selected(self):
         return self.title
